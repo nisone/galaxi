@@ -2,9 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    Welcome()
+  return ([
+    Navbar(),
+    Welcome()]
   );
+}
+
+export function Navbar() {
+  return (
+    <nav>
+      
+      <a href='http://localhost:3000' ><img src={logo} alt='logo' width='25'></img> Home</a>
+    </nav>
+  )
 }
 
 export function Welcome() {

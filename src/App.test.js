@@ -20,3 +20,9 @@ test('render navbar', () => {
   expect(homeElement).toBeInTheDocument();
 }); 
 
+test('render logo', () => {
+  render(<Navbar/>);
+  const logoElement = screen.getByAltText(/logo/i);
+  expect(logoElement).toBeVisible();
+});
+
