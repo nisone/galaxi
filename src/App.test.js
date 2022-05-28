@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import App, { Navbar } from './App';
 import Welcome from './App';
 
 test('renders learn react link', () => {
@@ -13,4 +13,10 @@ test('render welcom to reactjs', () => {
   const welcomeText = screen.getByText(/Welcome to reactjs/i);
   expect(welcomeText).toBeInTheDocument();
 });
+
+test('render navbar', () => {
+  render(<Navbar />);
+  const homeElement = screen.getByText(/Home/i);
+  expect(homeElement).toBeInTheDocument();
+}); 
 
