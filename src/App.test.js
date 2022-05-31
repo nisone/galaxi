@@ -14,15 +14,16 @@ test('render welcom to reactjs', () => {
   expect(welcomeText).toBeInTheDocument();
 });
 
-test('render navbar', () => {
-  render(<Navbar />);
+test('render navbar link', () => {
+  render(Navbar('us'));
   const homeElement = screen.getByText(/Home/i);
   expect(homeElement).toBeInTheDocument();
 }); 
 
 test('render logo', () => {
-  render(<Navbar/>);
+  render(Navbar('us'));
   const logoElement = screen.getByAltText(/logo/i);
   expect(logoElement).toBeVisible();
 });
+
 
